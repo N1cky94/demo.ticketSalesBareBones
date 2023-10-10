@@ -18,7 +18,13 @@ class EventTicketBehaviourTest {
                 "Test Event",
                 LocalDateTime.of(2024, 1, 5, 10, 0),
                 LocalDateTime.of(2024, 1, 6, 2, 0),
-                "Test Location",
+                new Location(
+                        "Dev Home",
+                        "Kneukelstraat",
+                        "39",
+                        "Aalter",
+                        "9880",
+                        "Belgium"),
                 100
         );
     }

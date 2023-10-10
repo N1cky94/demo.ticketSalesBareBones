@@ -11,7 +11,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Tag("unit")
 public class EventCreationTest {
      final String EVENT_NAME = "Test Event";
-     final String EVENT_LOCATION = "Test Location";
+     final Location EVENT_LOCATION = new Location(
+             "Dev Home",
+             "Kneukelstraat",
+             "39",
+             "Aalter",
+             "9880",
+             "Belgium"
+     );
      final int EVENT_CAPACITY = 100;
      final LocalDateTime EVENT_START = LocalDateTime.of(2024, 1, 5, 10, 0);
      final LocalDateTime EVENT_END = LocalDateTime.of(2024, 1, 6, 2, 0);

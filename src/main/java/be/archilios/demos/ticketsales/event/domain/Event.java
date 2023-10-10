@@ -12,11 +12,11 @@ public class Event {
     private String name;
     private LocalDateTime start;
     private LocalDateTime end;
-    private String location;
+    private Location location;
     private int capacity;
     private int availableTickets;
 
-    public static Event createNewEvent(String name, LocalDateTime start, LocalDateTime end, String location, int capacity) {
+    public static Event createNewEvent(String name, LocalDateTime start, LocalDateTime end, Location location, int capacity) {
         return EventFactory.createNewEvent(name, start, end, location, capacity);
     }
 
@@ -36,7 +36,7 @@ public class Event {
 }
 
 class EventFactory {
-    static Event createNewEvent(String name, LocalDateTime start, LocalDateTime end, String location, int capacity) {
+    static Event createNewEvent(String name, LocalDateTime start, LocalDateTime end, Location location, int capacity) {
         return new Event(
                 null,
                 name,
