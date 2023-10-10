@@ -1,0 +1,15 @@
+# PostgresSQL Configuration
+spring:
+  datasource:
+    url: ${PSGDB_URL}
+    username: ${PSGDB_USER}
+    password: ${PSGDB_PSW}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true

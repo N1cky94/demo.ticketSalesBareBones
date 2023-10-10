@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  tickets-db:
+    image: postgres:15.1-alpine
+    container_name: tickets-db
+    restart: always
+    volumes:
+      - ./data/schema.sql:/docker-entrypoint-initdb.d/01-init.sql
+      - ./data/data.sql:/docker-entrypoint-initdb.d/02-data.sql
+    environment:
+      - POSTGRES_DB=${PSGDB_DB}
+      - POSTGRES_USER=${PSGDB_USER}
+      - POSTGRES_PASSWORD=${PSGDB_PSW}
+    ports:
+      - "5432:5432"
